@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 import { siteConfig } from "@/config/siteConfig";
 
 const AnimatedNav = () => {
@@ -96,7 +97,7 @@ const AnimatedNav = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {siteConfig.navigation.map((item) => (
               <motion.div key={item.path} variants={linkVariants}>
                 <Link
@@ -111,6 +112,11 @@ const AnimatedNav = () => {
                 </Link>
               </motion.div>
             ))}
+
+            {/* Theme Toggle */}
+            <motion.div variants={linkVariants}>
+              <ThemeToggle />
+            </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -157,6 +163,9 @@ const AnimatedNav = () => {
               className="md:hidden mt-4 glass-card rounded-xl p-6"
             >
               <div className="flex flex-col gap-4">
+                <div className="flex justify-end">
+                  <ThemeToggle />
+                </div>
                 {siteConfig.navigation.map((item) => (
                   <motion.div key={item.path} variants={mobileItemVariants}>
                     <Link

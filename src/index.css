@@ -78,6 +78,19 @@
     scroll-snap-type: y mandatory;
   }
 
+  /* Light theme overrides when `html.light` is present */
+  html.light {
+    --background: 0 0% 100%; /* white */
+    --foreground: 220 14% 8%; /* dark text */
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 8%;
+    --popover: 0 0% 98%;
+    --muted: 220 20% 97%;
+    --border: 220 15% 86%;
+    --ring: 222 47% 4%;
+    --shadow-card: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
@@ -85,6 +98,11 @@
 
     /* Ensure the body is the scroll container that snaps to child sections */
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* Smooth transition when switching themes */
+  html, body {
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
