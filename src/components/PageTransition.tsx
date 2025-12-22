@@ -81,22 +81,7 @@ const getPageTransition = (pathname: string) => {
           transition: { duration: 0.4 }
         },
       };
-    case "/profiles":
-      return {
-        initial: { opacity: 0, scale: 0.8, rotate: -5 },
-        enter: { 
-          opacity: 1, 
-          scale: 1,
-          rotate: 0,
-          transition: { duration: 0.5, type: "spring", stiffness: 150 }
-        },
-        exit: { 
-          opacity: 0, 
-          scale: 1.2,
-          rotate: 5,
-          transition: { duration: 0.3 }
-        },
-      };
+
     case "/achievements":
       return {
         initial: { opacity: 0, x: 100, skewX: -10 },

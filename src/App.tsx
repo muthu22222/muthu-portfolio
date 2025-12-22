@@ -14,7 +14,6 @@ import PageTransition from "@/components/PageTransition";
 import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
 import ProjectsPage from "@/pages/ProjectsPage";
-import ProfilesPage from "@/pages/ProfilesPage";
 import AchievementsPage from "@/pages/AchievementsPage";
 import ContactPage from "@/pages/ContactPage";
 import NotFound from "@/pages/NotFound";
@@ -31,7 +30,6 @@ const AnimatedRoutes = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/profiles" element={<ProfilesPage />} />
           <Route path="/achievements" element={<AchievementsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />

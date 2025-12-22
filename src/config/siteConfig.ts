@@ -28,7 +28,7 @@ export const siteConfig = {
   // Coding Profiles
   codingProfiles: {
     leetcode: "https://leetcode.com/u/MUTHU77/",
-    hackerrank: "https://hackerrank.com/yourprofile",
+    hackerrank: "https://www.hackerrank.com/profile/sureshmuthu1212",
     codechef: "https://www.codechef.com/users/brave_note_75",
    
   },
@@ -147,21 +147,21 @@ I aspire to grow as a professional software developer through real-world projec
   achievements: [
     {
       id: 1,
-      title: "Winner - Hackathon XYZ",
-      year: "2024",
-      description: "Led a 4-person team to build an AI-driven accessibility tool and won first place.",
+      title: "Winner - DT 1000 MAGAZINE DESIGN COMPETITION",
+      year: "2025",
+      description: "DT 1000 is a magazine design competition that challenges students to showcase creativity, layout skills,",
     },
     {
       id: 2,
-      title: "Top 10 - College Coding Contest",
-      year: "2023",
-      description: "Placed in the top 10 among 500+ participants in a multi-round algorithmic contest.",
+      title: "TECHNICAL SKILL CERTIFICATION",
+      year: "2025",
+      description: "Successfully earned certification in modern development technologies , validating my ability to design.",
     },
     {
       id: 3,
-      title: "Open Source Contributor",
-      year: "2022",
-      description: "Contributed significant bug fixes and features to a popular open-source library.",
+      title: "National-Level Technical Seminar Participation",
+      year: "2024",
+      description: "Successfully participated in a national-level technical seminar on  -Deep Learning Towards Autonomy",
     },
   ],
   
@@ -177,7 +177,6 @@ I aspire to grow as a professional software developer through real-world projec
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
-    { name: "Profiles", path: "/profiles" },
     { name: "Achievements", path: "/achievements" },
     { name: "Contact", path: "/contact" },
   ],
