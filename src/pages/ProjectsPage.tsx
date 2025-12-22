@@ -47,28 +47,7 @@ const ProjectsPage = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <motion.div
-            variants={itemVariants}
-            className="text-center mt-16"
-          >
-            <motion.a
-              href={siteConfig.socials.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-display text-lg px-8 py-4 rounded-full glass-card text-foreground hover:text-primary transition-all glow-border"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View More on GitHub
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-              >
-                →
-              </motion.span>
-            </motion.a>
-          </motion.div>
+
         </motion.div>
       </div>
     </section>

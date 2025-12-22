@@ -1,5 +1,4 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
 
 interface Project {
   id: number;
@@ -72,35 +71,12 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60" />
             
-            {/* Hover Overlay */}
+            {/* Hover Overlay (actions removed) */}
             <motion.div
               initial={{ opacity: 0 }}
               whileHover={{ opacity: 1 }}
-              className="absolute inset-0 bg-gradient-to-t from-primary/30 to-accent/20 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <motion.a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-all"
-                whileHover={{ scale: 1.2, rotate: 15 }}
-                whileTap={{ scale: 0.9 }}
-                style={{ transform: "translateZ(40px)" }}
-              >
-                <ExternalLink className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-all"
-                whileHover={{ scale: 1.2, rotate: -15 }}
-                whileTap={{ scale: 0.9 }}
-                style={{ transform: "translateZ(40px)" }}
-              >
-                <Github className="w-5 h-5" />
-              </motion.a>
-            </motion.div>
+              className="absolute inset-0 bg-gradient-to-t from-primary/30 to-accent/20 opacity-0 group-hover:opacity-60 transition-opacity duration-300"
+            />
           </div>
 
           {/* Content */}
