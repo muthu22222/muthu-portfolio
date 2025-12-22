@@ -125,13 +125,23 @@ const PageTransition = ({ children }: PageTransitionProps) => {
 
   return (
     <AnimatePresence mode="wait">
+      {/* Curtain overlay: subtle full-screen fade for route transitions */}
+      <motion.div
+        key={`curtain-${location.pathname}`}
+        initial={{ opacity: 0, scale: 0.995 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.28, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="fixed inset-0 z-50 pointer-events-none bg-gradient-to-br from-primary/6 to-accent/6"
+      />
+
       <motion.div
         key={location.pathname}
         variants={transition}
         initial="initial"
         animate="enter"
         exit="exit"
-        className="min-h-screen"
+        className="min-h-screen relative z-40"
       >
         {children}
       </motion.div>
