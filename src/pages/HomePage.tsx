@@ -139,43 +139,7 @@ const HomePage = () => {
         </motion.div>
       </motion.div>
 
-      {/* Highlights: short about, featured projects, contact CTA */}
-      <section className="w-full mt-12 pt-8 pb-12">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-8">
-            <h2 className="section-title gradient-text mb-2">Highlights</h2>
-            <p className="font-body text-muted-foreground">
-              A short overview of my work and what I build. I'm focused on building clean, performant apps with a focus on UX and modern tooling.
-            </p>
-          </div>
 
-          {/* Featured Projects */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {siteConfig.projects.slice(0, 3).map((project) => (
-              <div key={project.id} className="glass-card rounded-xl p-4 text-left">
-                <img src={project.image} alt={project.title} className="w-full h-32 object-cover rounded-md mb-3" />
-                <h3 className="font-display text-lg font-bold mb-1">{project.title}</h3>
-                <p className="font-body text-sm text-muted-foreground mb-3">{project.description.slice(0, 90)}...</p>
-                <div className="flex items-center justify-between">
-                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="text-primary">GitHub</a>
-                  <Link to="/projects" className="text-foreground hover:text-primary">View</Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Contact CTA */}
-          <div className="text-center mt-10">
-            <p className="font-body text-muted-foreground mb-4">Want to work together or learn more?</p>
-            <Link to="/contact">
-              <Button size="lg" className="px-8 py-3 font-display">Contact Me</Button>
-            </Link>
-            <Link to="/projects" className="ml-4">
-              <Button variant="outline" size="lg" className="px-8 py-3">See All Projects</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
     </section>
   );
 };

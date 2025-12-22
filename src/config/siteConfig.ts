@@ -6,14 +6,14 @@
 export const siteConfig = {
   // Personal Information
   name: "MUTHUKUMARAN ",
-  tagline: "Full-Stack Developer",
+  tagline: "Computer Science and Design Student",
   email: "sureshmuthu1212@gmail.com",
   location: "COIMBATORE ,INDIA",
   
   // Resume PDF (place in public folder)
   resumePath: "cv.jpg",
   // Profile image (place file in public/, path is root-relative)
-  profileImage: "/muthu.jpg",
+  profileImage: "qwe.jpg",
   
   // Social Links
   socials: {
@@ -142,6 +142,28 @@ I aspire to grow as a professional software developer through real-world projec
       link: "#",
     },
   ],
+
+  // Achievements
+  achievements: [
+    {
+      id: 1,
+      title: "Winner - Hackathon XYZ",
+      year: "2024",
+      description: "Led a 4-person team to build an AI-driven accessibility tool and won first place.",
+    },
+    {
+      id: 2,
+      title: "Top 10 - College Coding Contest",
+      year: "2023",
+      description: "Placed in the top 10 among 500+ participants in a multi-round algorithmic contest.",
+    },
+    {
+      id: 3,
+      title: "Open Source Contributor",
+      year: "2022",
+      description: "Contributed significant bug fixes and features to a popular open-source library.",
+    },
+  ],
   
   // EmailJS Configuration (for contact form)
   emailjs: {
@@ -156,7 +178,7 @@ I aspire to grow as a professional software developer through real-world projec
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
     { name: "Profiles", path: "/profiles" },
-    { name: "Articles", path: "/articles" },
+    { name: "Achievements", path: "/achievements" },
     { name: "Contact", path: "/contact" },
   ],
 };

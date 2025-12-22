@@ -97,20 +97,20 @@ const getPageTransition = (pathname: string) => {
           transition: { duration: 0.3 }
         },
       };
-    case "/articles":
+    case "/achievements":
       return {
         initial: { opacity: 0, x: 100, skewX: -10 },
-        enter: { 
-          opacity: 1, 
+        enter: {
+          opacity: 1,
           x: 0,
           skewX: 0,
-          transition: { duration: 0.5, ease: "easeOut" }
+          transition: { duration: 0.5, ease: "easeOut" },
         },
-        exit: { 
-          opacity: 0, 
+        exit: {
+          opacity: 0,
           x: -100,
           skewX: 10,
-          transition: { duration: 0.3 }
+          transition: { duration: 0.3 },
         },
       };
     case "/contact":

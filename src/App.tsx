@@ -15,7 +15,7 @@ import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
 import ProjectsPage from "@/pages/ProjectsPage";
 import ProfilesPage from "@/pages/ProfilesPage";
-import ArticlesPage from "@/pages/ArticlesPage";
+import AchievementsPage from "@/pages/AchievementsPage";
 import ContactPage from "@/pages/ContactPage";
 import NotFound from "@/pages/NotFound";
 
@@ -32,7 +32,7 @@ const AnimatedRoutes = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/profiles" element={<ProfilesPage />} />
-          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/achievements" element={<AchievementsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
