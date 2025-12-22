@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
 import { Download, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Hero3D from "@/components/Hero3D";
 import SocialLinks from "@/components/SocialLinks";
 import { siteConfig } from "@/config/siteConfig";
 import { Button } from "@/components/ui/button";
+
+// Pages (also shown as sections on Home for single-page layout)
+import AboutPage from "@/pages/AboutPage";
+import ProjectsPage from "@/pages/ProjectsPage";
+import ProfilesPage from "@/pages/ProfilesPage";
+import ArticlesPage from "@/pages/ArticlesPage";
+import ContactPage from "@/pages/ContactPage";
 
 const HomePage = () => {
   const containerVariants = {
@@ -28,7 +36,7 @@ const HomePage = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 snap-start">
       {/* 3D Background */}
       <Hero3D />
 
@@ -49,6 +57,15 @@ const HomePage = () => {
           </span>
         </motion.div>
 
+        {/*  Image */}
+        <motion.div variants={itemVariants} className="mb-8">
+          <img
+            src={siteConfig.profileImage}
+            alt={`${siteConfig.name} photo`}
+            className="mx-auto w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-4 border-primary/30 shadow-lg"
+          />
+        </motion.div>
+
         {/* Name */}
         <motion.h1
           variants={itemVariants}
@@ -63,7 +80,7 @@ const HomePage = () => {
         {/* Tagline */}
         <motion.p
           variants={itemVariants}
-          className="font-body text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10"
+          className="font-body text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12"
         >
           {siteConfig.tagline}
         </motion.p>
@@ -71,7 +88,7 @@ const HomePage = () => {
         {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
         >
           <Link to="/contact">
             <Button
@@ -102,14 +119,14 @@ const HomePage = () => {
         </motion.div>
 
         {/* Social Links */}
-        <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants} className="mb-8">
           <SocialLinks variant="horizontal" size="md" />
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
           variants={itemVariants}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="absolute bottom-16 left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -129,8 +146,47 @@ const HomePage = () => {
           </motion.div>
         </motion.div>
       </motion.div>
+
+      {/* Duplicate main pages as in-page sections (no content changes) */}
+      <div id="about">
+        <AboutPage />
+      </div>
+
+      <div id="projects">
+        <ProjectsPage />
+      </div>
+
+      <div id="profiles">
+        <ProfilesPage />
+      </div>
+
+      <div id="articles">
+        <ArticlesPage />
+      </div>
+
+      <div id="contact">
+        <ContactPage />
+      </div>
     </section>
   );
 };
 
-export default HomePage;
+// Scroll to hash when landing on Home with a hash (e.g. /#projects)
+// This ensures direct links and router hash navigation scroll to the section.
+const HomePageWrapper = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      // small delay to allow page layout to settle
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    }
+  }, [location.hash]);
+
+  return <HomePage />;
+};
+
+export default HomePageWrapper;

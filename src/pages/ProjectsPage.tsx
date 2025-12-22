@@ -21,7 +21,7 @@ const ProjectsPage = () => {
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-20">
+    <section className="min-h-screen pt-44 pb-28 snap-start">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
@@ -41,7 +41,7 @@ const ProjectsPage = () => {
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {siteConfig.projects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}

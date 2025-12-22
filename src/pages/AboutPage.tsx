@@ -24,7 +24,7 @@ const AboutPage = () => {
   const abilityIcons = [Sparkles, Zap, Target, Rocket, Brain];
 
   return (
-    <section className="min-h-screen pt-32 pb-20">
+    <section className="min-h-screen pt-44 pb-28 snap-start">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
@@ -39,7 +39,7 @@ const AboutPage = () => {
             <h1 className="section-title gradient-text mt-2">About Me</h1>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
             {/* Bio Section */}
             <motion.div variants={itemVariants}>
               <div className="glass-card rounded-2xl p-8">
@@ -104,10 +104,10 @@ const AboutPage = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
           >
             {[
-              { label: "Years Experience", value: "5+" },
-              { label: "Projects Completed", value: "50+" },
-              { label: "Happy Clients", value: "30+" },
-              { label: "Lines of Code", value: "100K+" },
+            
+              { label: "Projects Completed", value: "4+" },
+              { label: "Hackathon participated", value: "7+" },
+              { label: "Tools learned", value: "10+" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

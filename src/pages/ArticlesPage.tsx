@@ -22,7 +22,7 @@ const ArticlesPage = () => {
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-20">
+    <section className="min-h-screen pt-44 pb-28 snap-start">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
@@ -42,7 +42,7 @@ const ArticlesPage = () => {
           </motion.div>
 
           {/* Articles Grid */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {siteConfig.articles.map((article, index) => (
               <ArticleCard key={article.id} article={article} index={index} />
             ))}

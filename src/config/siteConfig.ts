@@ -5,38 +5,41 @@
 
 export const siteConfig = {
   // Personal Information
-  name: "John Doe",
-  tagline: "Full-Stack Developer & Creative Technologist",
-  email: "your.email@example.com",
-  location: "San Francisco, CA",
+  name: "MUTHUKUMARAN ",
+  tagline: "Full-Stack Developer",
+  email: "sureshmuthu1212@gmail.com",
+  location: "COIMBATORE ,INDIA",
   
   // Resume PDF (place in public folder)
-  resumePath: "/resume.pdf",
+  resumePath: "cv.jpg",
+  // Profile image (place file in public/, path is root-relative)
+  profileImage: "/muthu.jpg",
   
   // Social Links
   socials: {
-    facebook: "https://facebook.com/yourprofile",
-    instagram: "https://instagram.com/yourprofile",
-    twitter: "https://twitter.com/yourprofile",
-    github: "https://github.com/yourprofile",
-    youtube: "https://youtube.com/@yourprofile",
+    facebook: "https://www.facebook.com/profile.php?id=61568072990813",
+    instagram: "https://www.instagram.com/frozynnnn/",
+    twitter: "https://x.com/MMuthu27884",
+    github: "https://github.com/muthu22222",
+    youtube: "https://www.youtube.com/@mkcreation1912",
     linkedin: "https://linkedin.com/in/yourprofile",
   },
   
   // Coding Profiles
   codingProfiles: {
-    leetcode: "https://leetcode.com/yourprofile",
+    leetcode: "https://leetcode.com/u/MUTHU77/",
     hackerrank: "https://hackerrank.com/yourprofile",
-    codechef: "https://codechef.com/users/yourprofile",
-    codeforces: "https://codeforces.com/profile/yourprofile",
+    codechef: "https://www.codechef.com/users/brave_note_75",
+   
   },
   
   // About Section
   about: {
-    bio: `I'm a passionate full-stack developer with 5+ years of experience building 
-    innovative web applications. I specialize in React, Node.js, and cloud technologies. 
-    When I'm not coding, you'll find me exploring new technologies, contributing to 
-    open-source projects, or sharing knowledge through tech blogs and tutorials.`,
+    bio: `I am a second-year student with a strong interest in full stack development.
+I build responsive and scalable web applications using modern frontend and backend technologies.
+I enjoy learning new frameworks and continuously improving my coding skills.
+I focus on writing clean, efficient, and maintainable code.
+I aspire to grow as a professional software developer through real-world projects.`,
     
     abilities: [
       "Building scalable web applications",
@@ -50,21 +53,21 @@ export const siteConfig = {
   // Skills with proficiency percentage
   skills: [
     { name: "React / Next.js", level: 95, category: "Frontend" },
-    { name: "TypeScript", level: 90, category: "Language" },
+    { name: "c", level: 90, category: "Language" },
     { name: "Node.js", level: 88, category: "Backend" },
     { name: "Python", level: 85, category: "Language" },
-    { name: "Three.js / WebGL", level: 80, category: "3D/Graphics" },
-    { name: "AWS / Cloud", level: 82, category: "DevOps" },
-    { name: "PostgreSQL", level: 85, category: "Database" },
-    { name: "Docker / K8s", level: 78, category: "DevOps" },
+    { name: "Blender", level: 80, category: "3D/Graphics" },
+    { name: "Java", level: 82, category: "Language" },
+    { name: "MY SQL", level: 85, category: "Database" },
+  
   ],
   
   // Projects
   projects: [
     {
       id: 1,
-      title: "AI Dashboard",
-      description: "Real-time analytics dashboard with AI-powered insights and predictions. Features interactive charts, natural language queries, and automated reporting.",
+      title: "ZOOTON",
+      description: "Zootone is an E-commerce app designed for a seamless shopping experience.It offers a wide range of products with easy browsing and secure checkout.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
       techStack: ["React", "Python", "TensorFlow", "D3.js"],
       liveUrl: "https://example.com/project1",
@@ -72,10 +75,10 @@ export const siteConfig = {
     },
     {
       id: 2,
-      title: "E-Commerce Platform",
-      description: "Full-featured e-commerce solution with payment processing, inventory management, and real-time order tracking.",
+      title: "ZOOTON",
+      description: "Zootone is an E-commerce app designed for a seamless shopping experience.It offers a wide range of products with easy browsing and secure checkout",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-      techStack: ["Next.js", "Stripe", "PostgreSQL", "Redis"],
+      techStack: ["react", "firebase", "flutterflow"],
       liveUrl: "https://example.com/project2",
       githubUrl: "https://github.com/yourprofile/project2",
     },
@@ -97,24 +100,7 @@ export const siteConfig = {
       liveUrl: "https://example.com/project4",
       githubUrl: "https://github.com/yourprofile/project4",
     },
-    {
-      id: 5,
-      title: "DevOps Dashboard",
-      description: "Comprehensive DevOps monitoring solution with CI/CD pipeline visualization, metrics tracking, and alerting.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      techStack: ["Vue.js", "Go", "Kubernetes", "Prometheus"],
-      liveUrl: "https://example.com/project5",
-      githubUrl: "https://github.com/yourprofile/project5",
-    },
-    {
-      id: 6,
-      title: "ML Code Generator",
-      description: "AI-powered code generation tool that converts natural language to production-ready code with documentation.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
-      techStack: ["Python", "OpenAI", "FastAPI", "React"],
-      liveUrl: "https://example.com/project6",
-      githubUrl: "https://github.com/yourprofile/project6",
-    },
+    
   ],
   
   // Articles / Blog Posts
@@ -159,9 +145,9 @@ export const siteConfig = {
   
   // EmailJS Configuration (for contact form)
   emailjs: {
-    serviceId: "YOUR_SERVICE_ID",
-    templateId: "YOUR_TEMPLATE_ID",
-    publicKey: "YOUR_PUBLIC_KEY",
+    serviceId: "service_1oy0ibw",
+    templateId: "template_53orn09",
+    publicKey: "47VFjHdCtMY45bHxU",
   },
   
   // Navigation Items

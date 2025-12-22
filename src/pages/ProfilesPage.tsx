@@ -60,7 +60,7 @@ const ProfilesPage = () => {
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-20">
+    <section className="min-h-screen pt-44 pb-28 snap-start">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
@@ -82,7 +82,7 @@ const ProfilesPage = () => {
           </motion.div>
 
           {/* Profiles Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto">
             {profiles.map((profile, index) => (
               <motion.a
                 key={profile.name}

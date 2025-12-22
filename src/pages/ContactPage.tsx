@@ -24,7 +24,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="min-h-screen pt-32 pb-20">
+    <section className="min-h-screen pt-44 pb-28 snap-start">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
@@ -43,7 +43,7 @@ const ContactPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             {/* Contact Info */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="glass-card rounded-2xl p-8">

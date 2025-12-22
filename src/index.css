@@ -74,12 +74,17 @@
 
   html {
     scroll-behavior: smooth;
+    /* Enable vertical scroll snapping for full-page sections */
+    scroll-snap-type: y mandatory;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
     overflow-x: hidden;
+
+    /* Ensure the body is the scroll container that snaps to child sections */
+    -webkit-overflow-scrolling: touch;
   }
 
   h1, h2, h3, h4, h5, h6 {
