@@ -5,10 +5,10 @@
 
 export const siteConfig = {
   // Personal Information
-  name: "MUTHUKUMARAN ",
+  name: " MUTHUKUMARAN S ",
   tagline: "Computer Science and Design Student",
   email: "sureshmuthu1212@gmail.com",
-  location: "COIMBATORE ,INDIA",
+  location: "COIMBATORE.,INDIA",
   
   // Resume PDF (place in public folder)
   resumePath: "cv.jpg",
